@@ -93,7 +93,7 @@ print(__">
     </p>
   <p class="article-time">
     <time datetime="2018-03-28T03:56:07.000Z" itemprop="datePublished">2018-03-28</time>
-    更新日期:<time datetime="2018-03-29T04:48:37.472Z" itemprop="dateModified">2018-03-29</time>
+    更新日期:<time datetime="2018-03-29T06:27:43.106Z" itemprop="dateModified">2018-03-29</time>
     
   </p>
 </header>
@@ -186,6 +186,21 @@ b: 返回值中包含函数名（不修改函数的调用方式）
 <li>os.path.dirname(path)  返回path的目录。其实就是os.path.split(path)的第一个元素</li>
 <li>os.path.basename(path)  返回path最后的文件名。</li>
 <li>os.path.exists(path)  如果path存在，返回True；如果path不存在，返回False</li>
+</ul>
+<hr>
+
+<h2 id="re模块"><a href="#re模块" class="headerlink" title="re模块"></a>re模块</h2><h3 id="常用正则表达式符号"><a href="#常用正则表达式符号" class="headerlink" title="常用正则表达式符号"></a>常用正则表达式符号</h3><ul>
+<li>‘.’     默认匹配除\n之外的任意一个字符</li>
+<li>‘^’     匹配字符开头</li>
+<li>‘$’     匹配字符结尾</li>
+<li>‘+’     匹配前一个字符1次或多次，re.findall(“ab+”,”ab+cd+abb+bba”) 结果[‘ab’, ‘abb’]</li>
+<li>‘|’     匹配|左或|右的字符，re.search(“abc|ABC”,”ABCBabcCD”).group() 结果’ABC’</li>
+<li>‘\d’    匹配数字0-9</li>
+</ul>
+<h3 id="最常用的匹配语法"><a href="#最常用的匹配语法" class="headerlink" title="最常用的匹配语法"></a>最常用的匹配语法</h3><ul>
+<li>re.match() 从头开始匹配</li>
+<li>re.search() 匹配包含</li>
+<li>re.findall() 把所有匹配到的字符放到以列表中的元素返回<br> <strong>(没有group()方法)</strong></li>
 </ul>
 
     </div>
