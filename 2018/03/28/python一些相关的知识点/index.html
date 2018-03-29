@@ -24,10 +24,7 @@ abs()  取绝对值
 匿名函数 a = lambda n:print(n)a(5)  
 round() 保留小数点后几位eg:a = round(1.33568,2) a = 1.33
 zip() 
-
-
-
-装饰器定义">
+print(__">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -96,7 +93,7 @@ zip()
     </p>
   <p class="article-time">
     <time datetime="2018-03-28T03:56:07.000Z" itemprop="datePublished">2018-03-28</time>
-    更新日期:<time datetime="2018-03-28T14:49:15.744Z" itemprop="dateModified">2018-03-28</time>
+    更新日期:<time datetime="2018-03-29T01:11:41.954Z" itemprop="dateModified">2018-03-29</time>
     
   </p>
 </header>
@@ -108,9 +105,13 @@ zip()
 <li>匿名函数 <br>a = lambda n:print(n)<br><br>a(5)  </li>
 <li>round() 保留小数点后几位<br>eg:a = round(1.33568,2) <br>a = 1.33</li>
 <li>zip() </li>
-</ol>
-<hr>
+<li>print(__file__)  <strong><em>显示本文件相对路径</em></strong></li>
+<li>import os <br><br>print(os.path.abspath(__file__)) <br><br><strong><em>显示本文件绝对路径</em></strong></li>
+<li>import os <br><br>print(os.path.dirname(os.path.abspath(__file__)) )<br><br><strong><em>去掉文件名，保留目录名</em></strong></li>
+<li>import sys<br><br>sys.path.append(<em>此处写目录名也可以是存地址的变量</em>）<br><br><strong><em>可以引用不同目录下的文件</em></strong><hr>
 
+</li>
+</ol>
 <h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>定义：本质是函数，（装饰其他函数）就是为其他函数添加附加功能</p>
 <p>原则：</p>
 <ol>
