@@ -24,7 +24,9 @@ show tables;
 
 desc user;查看表的结构
 
-select * from user\G; 查看表里所有的数据">
+select * from user\G; 查看表里所有的数据
+
+mysql 与 python 的交互123456789101112131415161718192021222324">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -93,7 +95,7 @@ select * from user\G; 查看表里所有的数据">
     </p>
   <p class="article-time">
     <time datetime="2018-03-31T13:37:49.000Z" itemprop="datePublished">2018-03-31</time>
-    更新日期:<time datetime="2018-03-31T14:07:50.374Z" itemprop="dateModified">2018-03-31</time>
+    更新日期:<time datetime="2018-04-01T04:10:42.143Z" itemprop="dateModified">2018-04-01</time>
     
   </p>
 </header>
@@ -107,7 +109,7 @@ select * from user\G; 查看表里所有的数据">
 </li>
 <li>select * from user\G;<br><br> 查看表里所有的数据</li>
 </ol>
-
+<h2 id="mysql-与-python-的交互"><a href="#mysql-与-python-的交互" class="headerlink" title="mysql 与 python 的交互"></a>mysql 与 python 的交互</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 作者：王子明</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建连接</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'10.101.237.45'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, passwd=<span class="string">'wzm123456789'</span>, db=<span class="string">'数据库1'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"><span class="comment"># 创建游标</span></span><br><span class="line">cursor = conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行SQL，并返回收影响行数 查表中所有数据</span></span><br><span class="line">effect_row = cursor.execute(<span class="string">"select * from wzm"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示有几行数</span></span><br><span class="line">print(effect_row)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 只读一行读</span></span><br><span class="line">print(cursor.fetchone())</span><br><span class="line">print(cursor.fetchone())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取前n行数据</span></span><br><span class="line">cursor.fetchmany(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"------"</span>)</span><br><span class="line"></span><br><span class="line">print(cursor.fetchall())   <span class="comment"># 读所有（但之前读过的不读）</span></span><br></pre></td></tr></table></figure>
     </div>
     <footer>
         
