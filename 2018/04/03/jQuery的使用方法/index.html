@@ -18,7 +18,10 @@
   <title>jQuery的使用方法 | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="jQuery的使用方法">
+  <meta name="description" content="jQuery的使用方法1234&amp;lt;script src = &#34;jquery-1.12.4.js&#34;&amp;gt;&amp;lt;/script&amp;gt;jQuery == $
+转换jquery对象[0]  ==&amp;gt;  Dom对象
+Dom对象        ==&amp;gt;  $(Dom对象)
+查找元素选择器：直接">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -87,13 +90,30 @@
     </p>
   <p class="article-time">
     <time datetime="2018-04-03T12:05:20.000Z" itemprop="datePublished">2018-04-03</time>
-    更新日期:<time datetime="2018-04-03T12:16:20.396Z" itemprop="dateModified">2018-04-03</time>
+    更新日期:<time datetime="2018-04-03T13:50:24.648Z" itemprop="dateModified">2018-04-03</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="jQuery的使用方法"><a href="#jQuery的使用方法" class="headerlink" title="jQuery的使用方法"></a>jQuery的使用方法</h1>
+        <h1 id="jQuery的使用方法"><a href="#jQuery的使用方法" class="headerlink" title="jQuery的使用方法"></a>jQuery的使用方法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script src = <span class="string">"jquery-1.12.4.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">jQuery == $</span><br></pre></td></tr></table></figure>
+<h4 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h4><pre><code>jquery对象[0]  ==&gt;  Dom对象
+Dom对象        ==&gt;  $(Dom对象)
+</code></pre><h2 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h2><h3 id="选择器：直接找到某个或者某类标签"><a href="#选择器：直接找到某个或者某类标签" class="headerlink" title="选择器：直接找到某个或者某类标签"></a>选择器：直接找到某个或者某类标签</h3><ol>
+<li><p>id选择器 ——-$(‘#id’)</p>
+</li>
+<li><p>class选择器—-$(‘.c1’)</p>
+</li>
+<li>标签选择器—–$(‘a’)</li>
+<li>组合选择器—–$(‘ a , .c2 , #i2 ‘)</li>
+<li><p>层级选择器—–$(‘#i10 a’) 子子孙孙</p>
+<p> $(‘#i10&gt;a’)  只儿子</p>
+</li>
+<li><p>:first<br>:last<br>:eq()</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">(<span class="string">'#id a:first'</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash">(<span class="string">'#id&gt;a:first'</span>)</span></span><br></pre></td></tr></table></figure>
+<h2 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h2>
     </div>
     <footer>
         
