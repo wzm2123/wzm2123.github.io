@@ -15,19 +15,19 @@
 	})();
 	</script>
   
-  <title>javascript的使用 | 王子明</title>
+  <title>javascript基础 | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="javascript的使用
+  <meta name="description" content="javascript基础
 引用js文件的内容1&amp;lt;script src = &#34;abc.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
 
 
-12345&amp;lt;body&amp;gt;    &amp;lt;script&amp;gt;  JS代码需要放置在&amp;lt;body&amp;gt;标签内部的最下方    &amp;lt;/scri">
+12345&amp;lt;body&amp;gt;    &amp;lt;script&amp;gt;  JS代码需要放置在&amp;lt;body&amp;gt;标签内部的最下方    &amp;lt;/scrip">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="javascript的使用"/>
+  <meta property="og:title" content="javascript基础"/>
   <meta property="og:site_name" content="王子明"/>
 
   
@@ -83,7 +83,7 @@
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	javascript的使用
+	javascript基础
   </h1>
   <p class="article-author">By
     
@@ -91,17 +91,59 @@
     </p>
   <p class="article-time">
     <time datetime="2018-04-02T14:39:07.000Z" itemprop="datePublished">2018-04-02</time>
-    更新日期:<time datetime="2018-04-02T15:03:18.426Z" itemprop="dateModified">2018-04-02</time>
+    更新日期:<time datetime="2018-04-03T02:56:47.035Z" itemprop="dateModified">2018-04-03</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="javascript的使用"><a href="#javascript的使用" class="headerlink" title="javascript的使用"></a>javascript的使用</h1><ul>
+        <h1 id="javascript基础"><a href="#javascript基础" class="headerlink" title="javascript基础"></a>javascript基础</h1><ul>
 <li>引用js文件的内容<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src = <span class="string">"abc.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">  JS代码需要放置在<span class="tag">&lt;<span class="name">body</span>&gt;</span>标签内部的最下方</span></span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>//内容 （单行注释）<br><br>/<em>   内容   </em>/ (多行注释)</p>
+<hr>
+
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var name</span> = <span class="string">"wzm"</span>;</span><br><span class="line"><span class="attribute">var age</span> = 18;</span><br></pre></td></tr></table></figure>
+<p>局部变量必须一个 var 开头，如果未使用var，则默认表示声明的是全局变量</p>
+<hr>
+
+<p>parseInt(..)    将某值转换成数字，不成功则NaN</p>
+<p>parseFloat(..) 将某值转换成浮点数，不成功则NaN<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">age= <span class="string">"18"</span>;</span><br><span class="line">i = <span class="built_in">parseInt</span>(age);</span><br></pre></td></tr></table></figure></p>
+<hr>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a = <span class="string">"alex"</span>;</span><br><span class="line"></span><br><span class="line">a.charAt(n)        返回字符串中的第n个字符</span><br><span class="line">a.substring(<span class="number">1</span>, <span class="number">3</span>)    根据索引获取子序列(包括<span class="number">1</span>，不包括<span class="number">3</span>)</span><br><span class="line">a.length               长度</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="string">"f1()"</span>,<span class="number">5000</span>); <span class="meta">#单位毫秒</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span></span>()&#123;</span><br><span class="line">    console.log(<span class="number">1</span>);<span class="meta"># 在工作台显示</span></span><br><span class="line">    <span class="comment">// 根据ID获取指定标签的内容，定于局部变量的接收</span></span><br><span class="line">    <span class="keyword">var</span> tag = document.getElementById(<span class="string">'id号'</span>)</span><br><span class="line">    <span class="comment">//获取标签内部的内容</span></span><br><span class="line">    <span class="keyword">var</span> content = tag.innerText</span><br><span class="line"></span><br><span class="line">        <span class="comment">//滚动字条</span></span><br><span class="line">    <span class="keyword">var</span> f = content.charAt(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">var</span> l = content.substring(<span class="number">1</span>,content.length)</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">new</span><span class="type">_content</span> = l+f;</span><br><span class="line">    tag.innerText = <span class="keyword">new</span><span class="type">_content</span></span><br><span class="line"><span class="type"></span>&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.trim</span>()                  移除空白</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.trimLeft</span>()</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.trimRight</span>)</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.concat</span>(字符串内容)       字符串的拼接</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.indexOf</span>()               查找子序列位置（从前向后）</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.lastIndexOf</span>()           查找子序列位置（从后向前）</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.slice</span>(<span class="selector-tag">start</span>, <span class="selector-tag">end</span>)       切片</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.toLowerCase</span>()           大写</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.toUpperCase</span>()           小写</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.split</span>(以什么分割, 取几个) 分割</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><p>true false(小写) </p>
+<hr>
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.length</span>          数组的大小</span><br><span class="line"> </span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.push</span>(<span class="selector-tag">a</span>)         尾部追加元素</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.pop</span>()           尾部获取一个元素</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.unshift</span>(<span class="selector-tag">a</span>)      头部插入元素</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.shift</span>()         头部移除元素</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.splice</span>(插入起始位置, 删除个数, 替换的内容 )  插入、删除或替换数组的元素</span><br><span class="line">                    <span class="selector-tag">obj</span><span class="selector-class">.splice</span>(<span class="selector-tag">n</span>,0,<span class="selector-tag">val</span>) 指定位置插入元素</span><br><span class="line">                    <span class="selector-tag">obj</span><span class="selector-class">.splice</span>(<span class="selector-tag">n</span>,1,<span class="selector-tag">val</span>) 指定位置替换元素</span><br><span class="line">                    <span class="selector-tag">obj</span><span class="selector-class">.splice</span>(<span class="selector-tag">n</span>,1)     指定位置删除元素</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.slice</span>( )        切片</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.reverse</span>( )      反转</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.join</span>(<span class="selector-tag">sep</span>)       将数组元素连接起来以构建一个字符串</span><br><span class="line"><span class="selector-tag">obj</span><span class="selector-class">.sort</span>( )         对数组元素进行排序</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><h3 id="1-循环时，循环的元素是索引"><a href="#1-循环时，循环的元素是索引" class="headerlink" title="1.循环时，循环的元素是索引"></a>1.循环时，循环的元素是索引</h3><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="keyword">for</span>(var <span class="literal">item</span> <span class="keyword">in</span> a)&#123;</span><br><span class="line">        console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">a = &#123;<span class="string">'k1'</span>:<span class="string">'v1'</span>,<span class="string">'k2'</span>:<span class="string">'v2'</span>&#125;</span><br><span class="line"><span class="keyword">for</span>(var <span class="literal">item</span> <span class="keyword">in</span> a)&#123;</span><br><span class="line">        console.log(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var <span class="built_in">i</span>=<span class="number">0</span>;<span class="built_in">i</span>&lt;<span class="number">10</span>;<span class="built_in">i</span>++)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="keyword">for</span>(var <span class="built_in">i</span>=<span class="number">0</span>;<span class="built_in">i</span>&lt;a.<span class="built_in">length</span>;<span class="built_in">i</span>++)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">不支持字典的循环</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><p>if(1 == 17 &amp;&amp; 2 == 2){</p>
+<p>}<br>    else if(1 == 17 || 2 == 2){</p>
+<p>}<br>else{</p>
+<p>}</p>
+<p>// 双等号是值相等就行，三等号是值和类型都相等</p>
+<p>if(1===1){</p>
+<p>}</p>
+<p>if(1!==1){</p>
+<p>}</p>
+<hr>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
     <footer>
@@ -168,7 +210,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2018/04/02/javascript的使用/" data-title="javascript的使用" data-url="https://wzm2123.github.io/2018/04/02/javascript的使用/"></div>
+		<div class="ds-thread" data-thread-key="2018/04/02/javascript的使用/" data-title="javascript基础" data-url="https://wzm2123.github.io/2018/04/02/javascript的使用/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
