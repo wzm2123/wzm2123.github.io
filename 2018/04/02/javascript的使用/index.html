@@ -91,7 +91,7 @@
     </p>
   <p class="article-time">
     <time datetime="2018-04-02T14:39:07.000Z" itemprop="datePublished">2018-04-02</time>
-    更新日期:<time datetime="2018-04-03T08:41:36.663Z" itemprop="dateModified">2018-04-03</time>
+    更新日期:<time datetime="2018-04-04T04:39:21.339Z" itemprop="dateModified">2018-04-04</time>
     
   </p>
 </header>
@@ -168,6 +168,19 @@
 
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">this</span>.name = n;</span><br><span class="line"></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">var odj = new Foo('we'); # 创建对象</span><br></pre></td></tr></table></figure>
 <h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span> (<span class="params">name,age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.Name = name;</span><br><span class="line">    <span class="keyword">this</span>.Age = age;</span><br><span class="line">&#125;</span><br><span class="line"># Foo的原型</span><br><span class="line">Foo.prototype = &#123;</span><br><span class="line">    <span class="string">'GetInfo'</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.Name + <span class="keyword">this</span>.Age</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'Func'</span> : <span class="function"><span class="keyword">function</span>(<span class="params">arg</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.Name + arg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="js-正则"><a href="#js-正则" class="headerlink" title="js 正则"></a>js 正则</h2><ul>
+<li><p>test  - 判断字符串是否符合规定的正则表达式</p>
+</li>
+<li><p>exec  - 获取匹配的数据</p>
+</li>
+</ul>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="built_in">rep</span> = /\d+/;</span><br><span class="line">   <span class="built_in">rep</span>.test(<span class="string">"gihgdiuh89idfh"</span>)</span><br><span class="line"></span><br><span class="line">   # <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">rep</span> = /^\d+$/;</span><br><span class="line">   <span class="built_in">rep</span>.test(<span class="string">"gihgdiuh89idfh"</span>)</span><br><span class="line"></span><br><span class="line">   # <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> <span class="built_in">rep</span> = /\d+/;</span><br><span class="line">  str = <span class="string">"fgsihu_64_gng_20_"</span></span><br><span class="line">  <span class="built_in">rep</span>.exec(str)</span><br><span class="line">  # [<span class="string">"64"</span>]</span><br><span class="line"> </span><br><span class="line"> <span class="number">4.</span>var pattern = /\bJava(\w*)\b/;</span><br><span class="line">  var text = <span class="string">"JavaScript is more JavaBeans!"</span>;  </span><br><span class="line">  pattern.exec(text)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>/…/  用于定义正则表达式</li>
+<li>/…/g 表示全局匹配</li>
+<li>/…/i 表示不区分大小写</li>
+<li>/…/m 表示多行匹配</li>
+</ul>
 
     </div>
     <footer>
@@ -268,7 +281,7 @@ with(document)0[
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
+    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
   </div>
 </div>
 
