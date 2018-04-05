@@ -98,7 +98,7 @@ ls /       ">
     </p>
   <p class="article-time">
     <time datetime="2018-04-04T13:15:13.000Z" itemprop="datePublished">2018-04-04</time>
-    更新日期:<time datetime="2018-04-04T14:46:22.823Z" itemprop="dateModified">2018-04-04</time>
+    更新日期:<time datetime="2018-04-05T09:36:44.313Z" itemprop="dateModified">2018-04-05</time>
     
   </p>
 </header>
@@ -122,12 +122,61 @@ ls /       ">
 <li>ls 1[12345]3.txt———选择取</li>
 <li>ls &gt; xxx.txt————–重定向</li>
 <li>ls &gt;&gt; xxx.txt———–追加</li>
-<li>命令 –help  ===== man 命令 (按Q退出，按F翻屛，按B回翻屏)</li>
+<li>命令 - -help  ===== man 命令 (按Q退出，按F翻屛，按B回翻屏)</li>
 <li>gedit 部分文件名+“tab”——–自动补全（可以编辑）</li>
 <li>cat 部分文件名+“tab”———–自动补全，只查看内容（）</li>
+<li>more 文件名——————查看部分内容（可翻页）</li>
 <li>history————————–历史命令</li>
-<li>！200——-执行200对应的命令</li>
-<li>rm 文件或文件夹名———-删除</li>
+<li><p>！200——-执行200对应的命令</p>
+</li>
+<li><p>ls -alh /bin | more——–某一目录下内容的分屏显示</p>
+</li>
+<li>cd /home/+两次”tab”——-显示能添加的内容</li>
+<li>cd . . / . .—————–返回上上一文件夹</li>
+<li>cd -返回上一次所在位置</li>
+<li>cd ~ ——————-家目录</li>
+<li>tree——————–以目录树的方式显示内容</li>
+<li>mkdir A/B/C/D/E -p———–自动创建</li>
+<li>rm 文件———-删除文件</li>
+<li>rm 文件夹名 -r———-删除文件夹（强制）</li>
+<li>rmdir 文件夹名———-删除文件夹(必须空的)</li>
+<li>mv 原文件名 新文件名—–重命名</li>
+<li>mv 文件名 文件夹/—–剪切到该文件夹下</li>
+<li>cp 文件名 文件夹—–复制到该文件夹下</li>
+<li>sudo find / -name “文件名” ——-搜索</li>
+<li>tar -cvf 打包文件名.tar  文件（*.py）——–打包</li>
+<li>tar -xvf 打包文件名.tar————解包</li>
+<li>tar -zcvf 打包文件名.tar.gz  文件（*.py）—–压缩</li>
+<li>ll == ls -al</li>
+<li>tar -zxvf 文件名.tar.gz (-C wzm/)————解压缩包</li>
+<li>tar -jcvf 打包文件名.tar.bz2  文件（*.py）——–压缩包2</li>
+<li>tar -jxvf 打包文件名.tar.bz2————解压缩包</li>
+<li>which ls————-查看命令在哪个路径下的文件</li>
+<li>cal——日历</li>
+<li>cal -y 2018——-所有日历</li>
+<li>date——-查看当前时间</li>
+<li>ps -aux———查看进程</li>
+<li>top/htop———–查看进程(实时显示)</li>
+<li>kill （-9） 对应数字——–关进程</li>
+<li>reboot————重启（init 6）</li>
+<li>shutdown -h now——-关机（init 0）</li>
+<li>df -h————–查看硬盘大小</li>
+<li>du -h————-当前路径所占大小</li>
+<li>ifconfig——–显示IP</li>
+<li><p>ping </p>
+</li>
+<li><p>sudo useradd wzm -m——-创建用户</p>
+<p>cat /etc/passwd———-检测账户</p>
+<p>passwd wzm—————更改密码</p>
+<p>su (-) wzm—————-切换用户</p>
+<p>exit</p>
+</li>
+<li><p>ctrl+shift+t———多用户显示</p>
+<p> alt + 1—————切换</p>
+</li>
+<li><p>ssh python(用户名)@ip———-远程控制  </p>
+</li>
+<li>sudo -s——————–切换管理员帐号</li>
 </ul>
 
     </div>
@@ -184,6 +233,8 @@ with(document)0[
 
  <nav id="pagination" >
     
+    <a href="/2018/04/05/vim命令/" class="alignleft prev" title="vim命令">vim命令</a>
+    
     
     <a href="/2018/04/04/Django的使用/" class="alignright next" title="Django的使用">Django的使用</a>
     
@@ -227,7 +278,7 @@ with(document)0[
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
+    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux-vim/" style="font-size: 10px;">Linux vim</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
   </div>
 </div>
 
