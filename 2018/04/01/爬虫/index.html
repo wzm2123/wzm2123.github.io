@@ -95,7 +95,7 @@ jupyter notebook
     </p>
   <p class="article-time">
     <time datetime="2018-04-01T13:13:38.000Z" itemprop="datePublished">2018-04-01</time>
-    更新日期:<time datetime="2018-04-02T10:29:41.077Z" itemprop="dateModified">2018-04-02</time>
+    更新日期:<time datetime="2018-04-06T04:58:35.817Z" itemprop="dateModified">2018-04-06</time>
     
   </p>
 </header>
@@ -112,11 +112,12 @@ jupyter notebook
 <li>404 Not Found 请求资源不存在</li>
 <li>503 Server Unavailable 服务器当前不能处理客户端的请求，一段时间后可能恢复正常</li>
 </ul>
-<h2 id="Urllib"><a href="#Urllib" class="headerlink" title="Urllib"></a>Urllib</h2><ol>
+<h2 id="Urllib"><a href="#Urllib" class="headerlink" title="Urllib"></a>Urllib</h2><h3 id="在python3中统一把urllib2改为urllib-request"><a href="#在python3中统一把urllib2改为urllib-request" class="headerlink" title="在python3中统一把urllib2改为urllib.request"></a>在python3中统一把urllib2改为urllib.request</h3><ol>
 <li><p>urlopen</p>
 <pre><code class="python"><span class="keyword">import</span> urllib.request
-
+<span class="comment"># 向指定的url地址发送请求，并返回服务器响应的类文件对象</span>
 response = urllib.request.urlopen(<span class="string">'http://www.baidu.com'</span>)
+<span class="comment"># 返回字符串</span>
 print(response.read().decode(<span class="string">'utf-8'</span>))
 
 </code></pre>
@@ -127,13 +128,31 @@ print(response.read().decode(<span class="string">'utf-8'</span>))
 </ul>
 </li>
 </ol>
-<pre><code class="python">
+<ol start="2">
+<li>用Request方法可以构造和浏览器相似的请求<br><code>`</code>python</li>
+</ol>
+<p>import urllib.request</p>
+<p>ua_headers = {“user-Agent”:”Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”}</p>
+<h1 id="通过urllib-request-Request-方法构造一个请求对象"><a href="#通过urllib-request-Request-方法构造一个请求对象" class="headerlink" title="通过urllib.request.Request()方法构造一个请求对象"></a>通过urllib.request.Request()方法构造一个请求对象</h1><p>request = urllib.request.Request(“<a href="http://www.baidu.com/&quot;" target="_blank" rel="noopener">http://www.baidu.com/&quot;</a>, headers = ua_headers)</p>
+<p>response = urllib.request.urlopen(request)</p>
+<h1 id="返回HTTP的响应码，成功返回200，"><a href="#返回HTTP的响应码，成功返回200，" class="headerlink" title="返回HTTP的响应码，成功返回200，"></a>返回HTTP的响应码，成功返回200，</h1><p>print(response.getcode())</p>
+<h1 id="返回实际url"><a href="#返回实际url" class="headerlink" title="返回实际url"></a>返回实际url</h1><p>print(response.geturl())</p>
+<h1 id="返回-服务器响应的HTTP报头"><a href="#返回-服务器响应的HTTP报头" class="headerlink" title="返回 服务器响应的HTTP报头"></a>返回 服务器响应的HTTP报头</h1><p>print(response.info())</p>
+<p>print(response.read().decode(‘utf-8’))</p>
+<h1 id="“user-Agent”-“Mozilla-5-0-Windows-NT-10-0-WOW64-AppleWebKit-537-36-KHTML-like-Gecko-Chrome-65-0-3325-181-Safari-537-36”"><a href="#“user-Agent”-“Mozilla-5-0-Windows-NT-10-0-WOW64-AppleWebKit-537-36-KHTML-like-Gecko-Chrome-65-0-3325-181-Safari-537-36”" class="headerlink" title="“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”"></a>“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”</h1><pre><code>
+一些浏览器的url-agent
+* Mozilla/5.0 (Windows; U; Windows NT 5.2) Gecko/2008070208 Firefox/3.0.1
+* Mozilla/5.0 (Windows; U; Windows NT 5.1) Gecko/20070309 Firefox/2.0.0.3
+* Mozilla/5.0 (Windows; U; Windows NT 5.2) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13
+* Mozilla/5.0 (Android; Mobile; rv:14.0) Gecko/14.0 Firefox/14.0
+* Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19
+* Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.12) Gecko/20080219 Firefox/2.0.0.12 Navigator/9.0.0.6
 
-</code></pre>
-<pre><code class="python">
+  ```python
 
-</code></pre>
-<pre><code class="python">
+  response.getcode()
+
+</code></pre><pre><code class="python">
 
 </code></pre>
 <pre><code class="python">
@@ -242,7 +261,7 @@ with(document)0[
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux-vim/" style="font-size: 10px;">Linux vim</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
+    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
   </div>
 </div>
 
