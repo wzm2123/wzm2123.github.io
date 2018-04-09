@@ -15,31 +15,15 @@
 	})();
 	</script>
   
-  <title>爬虫（二） | 王子明</title>
+  <title>1 | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="爬虫（二）
-AJAX方式加载的页面，数据来源一定是JSON
-
-处理HTTPS请求 SSL证书验证
-
-
-
-导入Python SSL处理模块
-
-import ssl
-
-
-表示忽略未经核实的SSL证书认证
-
-context = ssl._create_unverified_context()
-
-。。。。。">
+  <meta name="description" content="11">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="爬虫（二）"/>
+  <meta property="og:title" content="1"/>
   <meta property="og:site_name" content="王子明"/>
 
   
@@ -95,53 +79,21 @@ context = ssl._create_unverified_context()
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	爬虫（二）
+	1
   </h1>
   <p class="article-author">By
     
       <a href="https://wzm2123.github.io" title="王子明">王子明</a>
     </p>
   <p class="article-time">
-    <time datetime="2018-04-06T10:57:55.000Z" itemprop="datePublished">2018-04-06</time>
-    更新日期:<time datetime="2018-04-06T14:28:40.618Z" itemprop="dateModified">2018-04-06</time>
+    <time datetime="2018-04-09T02:16:13.000Z" itemprop="datePublished">2018-04-09</time>
+    更新日期:<time datetime="2018-04-09T02:16:56.935Z" itemprop="dateModified">2018-04-09</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="爬虫（二）"><a href="#爬虫（二）" class="headerlink" title="爬虫（二）"></a>爬虫（二）</h1><ul>
-<li><p>AJAX方式加载的页面，数据来源一定是JSON</p>
-</li>
-<li><p>处理HTTPS请求 SSL证书验证</p>
-</li>
-</ul>
-<ol>
-<li><p>导入Python SSL处理模块</p>
-<ul>
-<li>import ssl</li>
-</ul>
-</li>
-<li><p>表示忽略未经核实的SSL证书认证</p>
-<ul>
-<li><p>context = ssl._create_unverified_context()</p>
-</li>
-<li><p>。。。。。。urlopen(request，context=context)</p>
-</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建一个HTTPHandler处理器对象,支持处理HTTP的请求</span></span><br><span class="line">http_handler = urllib.request.HTTPHandler ()</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用build_opener()方法构建一个自定义的opener对象,参数是构建的处理器对象</span></span><br><span class="line">opener = urllib.request.build_opener(http_handler)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">request = urllib.request.Request(<span class="string">"http://www.baidu.com/"</span>)</span><br><span class="line"></span><br><span class="line">response = opener.open(request)</span><br><span class="line"></span><br><span class="line">print(response.read().decode(<span class="string">'utf-8'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#  "debuglevel=1"自动打开debug log 模式,打印收发包信息</span></span><br><span class="line"><span class="comment"># http_handler = urllib.request.HTTPHandler(debuglevel=1)</span></span><br></pre></td></tr></table></figure>
-<p>免费短期代理网站举例：</p>
-<ul>
-<li>西刺免费代理IP</li>
-<li>快代理免费代理</li>
-<li>Proxy360代理</li>
-<li>全网代理IP</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">proxySwitch = <span class="keyword">True</span> <span class="comment">#定义一个代理开关</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建了两个代理Handler，一个有代理IP，一个没有代理IP</span></span><br><span class="line">httpproxy_handler = urllib.request.ProxyHandler(&#123;<span class="string">"http"</span> : <span class="string">"122.72.18.35:80"</span>&#125;)</span><br><span class="line">nullproxy_handler = urllib.request.ProxyHandler(&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过 urllib2.build_opener()方法使用这些代理Handler对象，创建自定义opener对象</span></span><br><span class="line"><span class="comment"># 根据代理开关是否打开，使用不同的代理模式</span></span><br><span class="line"><span class="keyword">if</span> proxySwitch:</span><br><span class="line">    opener = urllib.request.build_opener(httpproxy_handler)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    opener = urllib.request.build_opener(nullproxy_handler)</span><br><span class="line">request = urllib.request.Request(<span class="string">"http://www.baidu.com/"</span>)</span><br><span class="line">response = opener.open(request)</span><br><span class="line">print(response.read().decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
-<p>购买的有账号密码:</p>
-<p>{“http” : “122.72.18.35:80”}</p>
-<p>{“http” : “账号 : 密码@ip : 端口号”}</p>
+        <p>11</p>
 
     </div>
     <footer>
@@ -149,7 +101,7 @@ context = ssl._create_unverified_context()
         
   
   <div class="tags">
-    <a href="/tags/python/">python</a>
+    <a href="/tags/1/">1</a>
   </div>
 
 		<div class="bdsharebuttonbox">
@@ -197,10 +149,8 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2018/04/09/1/" class="alignleft prev" title="1">1</a>
     
-    
-    <a href="/2018/04/05/vim命令/" class="alignright next" title="vim命令">vim命令</a>
+    <a href="/2018/04/06/爬虫（二）/" class="alignright next" title="爬虫（二）">爬虫（二）</a>
     
     <div class="clearfix"></div>
 </nav>
@@ -210,7 +160,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2018/04/06/爬虫（二）/" data-title="爬虫（二）" data-url="https://wzm2123.github.io/2018/04/06/爬虫（二）/"></div>
+		<div class="ds-thread" data-thread-key="2018/04/09/1/" data-title="1" data-url="https://wzm2123.github.io/2018/04/09/1/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
