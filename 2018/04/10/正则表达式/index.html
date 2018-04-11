@@ -15,23 +15,15 @@
 	})();
 	</script>
   
-  <title>爬虫（一） | 王子明</title>
+  <title>正则表达式 | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="爬虫（一）
-jupyter notebook
- B 添加新行
- ctrl+enter 运行
-
-200代表成功，301跳转，404找不到页面，502服务器错误
-401 Unauthorized 请求未经授权
-403 Forbidden 服务器收到请求，但是拒绝提供服务
-404 Not Found 请求">
+  <meta name="description" content="正则表达式12345678910111213#导⼊re模块				import	re#	使⽤match⽅法进⾏匹配操作result	= re.match(正则表达式,要匹配的字符串)#如果上⼀步匹配到数据的话，可以使⽤group⽅法来提取数据				result.group()re.match是⽤来">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="爬虫（一）"/>
+  <meta property="og:title" content="正则表达式"/>
   <meta property="og:site_name" content="王子明"/>
 
   
@@ -87,137 +79,48 @@ jupyter notebook
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	爬虫（一）
+	正则表达式
   </h1>
   <p class="article-author">By
     
       <a href="https://wzm2123.github.io" title="王子明">王子明</a>
     </p>
   <p class="article-time">
-    <time datetime="2018-04-01T13:13:38.000Z" itemprop="datePublished">2018-04-01</time>
-    更新日期:<time datetime="2018-04-06T12:21:38.917Z" itemprop="dateModified">2018-04-06</time>
+    <time datetime="2018-04-10T11:18:25.000Z" itemprop="datePublished">2018-04-10</time>
+    更新日期:<time datetime="2018-04-10T12:48:15.275Z" itemprop="dateModified">2018-04-10</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="爬虫（一）"><a href="#爬虫（一）" class="headerlink" title="爬虫（一）"></a>爬虫（一）</h1><ul>
-<li><p>jupyter notebook</p>
-<p> B 添加新行</p>
-<p> ctrl+enter 运行</p>
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导⼊re模块				</span></span><br><span class="line">import	re</span><br><span class="line"></span><br><span class="line"><span class="comment">#	使⽤match⽅法进⾏匹配操作</span></span><br><span class="line">result	= re.<span class="built_in">match</span>(正则表达式,要匹配的字符串)</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果上⼀步匹配到数据的话，可以使⽤group⽅法来提取数据				</span></span><br><span class="line">result.<span class="keyword">group</span>()</span><br><span class="line"></span><br><span class="line">re.<span class="built_in">match</span>是⽤来进⾏正则匹配检查的⽅法，若字符串匹配正则 表达式，则<span class="built_in">match</span>⽅法返回匹配对象（Match	Object），否则 返回None（注意不是空字符串<span class="string">""</span>）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">匹配对象Macth Object具有<span class="keyword">group</span>⽅法，⽤来返回字符串的匹 配部分。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>. 匹配任意1个字符（除了\n） </li>
+<li>\d 匹配数字，即0-9</li>
+<li>\D 匹配⾮数字，即不是数字 </li>
+<li>\s 匹配空⽩，即    空格，tab键</li>
+<li><p>\S 匹配⾮空⽩ </p>
 </li>
-<li>200代表成功，301跳转，404找不到页面，502服务器错误</li>
-<li>401 Unauthorized 请求未经授权</li>
-<li>403 Forbidden 服务器收到请求，但是拒绝提供服务</li>
-<li>404 Not Found 请求资源不存在</li>
-<li>503 Server Unavailable 服务器当前不能处理客户端的请求，一段时间后可能恢复正常</li>
+<li><p>\w 匹配单词字符，即a-z、A-Z、0-9、_ </p>
+</li>
+<li>\W 匹配⾮单词字符</li>
+<li>[]  匹配[    ]中列举的字符 (中间不能有间隔)</li>
+<li>* 匹配前⼀个字符出现0次或者⽆限次，即可有可</li>
+<li>+ 匹配前⼀个字符出现1次或者⽆限次，即⾄少有1次</li>
+<li>? 匹配前⼀个字符出现1次或者0次，即要么有1次，要么没有</li>
+<li>{m} 匹配前⼀个字符出现m次</li>
+<li>{m,} 匹配前⼀个字符⾄少出现m次</li>
+<li>{m,n} 匹配前⼀个字符出现从m到n次</li>
 </ul>
-<h2 id="Urllib"><a href="#Urllib" class="headerlink" title="Urllib"></a>Urllib</h2><h3 id="在python3中统一把urllib2改为urllib-request"><a href="#在python3中统一把urllib2改为urllib-request" class="headerlink" title="在python3中统一把urllib2改为urllib.request"></a>在python3中统一把urllib2改为urllib.request</h3><ol>
-<li><p>urlopen（初级）</p>
-<pre><code class="python"><span class="keyword">import</span> urllib.request
-<span class="comment"># 向指定的url地址发送请求，并返回服务器响应的类文件对象</span>
-response = urllib.request.urlopen(<span class="string">'http://www.baidu.com'</span>)
-<span class="comment"># 返回字符串</span>
-print(response.read().decode(<span class="string">'utf-8'</span>))
-
-</code></pre>
+<h4 id="re-match-r”-n-w”-”-nac”"><a href="#re-match-r”-n-w”-”-nac”" class="headerlink" title="re.match(r”\n\w”,”\nac”)"></a>re.match(r”\n\w”,”\nac”)</h4><ul>
+<li>^ 匹配字符串开头 </li>
+<li><p>$ 匹配字符串结尾</p>
 </li>
-</ol>
-<ol start="2">
-<li>用Request方法可以构造和浏览器相似的请求<br><code>`</code>python</li>
-</ol>
-<p>import urllib.request</p>
-<p>ua_headers = {“User-Agent”:”Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”}</p>
-<h1 id="通过urllib-request-Request-方法构造一个请求对象"><a href="#通过urllib-request-Request-方法构造一个请求对象" class="headerlink" title="通过urllib.request.Request()方法构造一个请求对象"></a>通过urllib.request.Request()方法构造一个请求对象</h1><p>request = urllib.request.Request(“<a href="http://www.baidu.com/&quot;" target="_blank" rel="noopener">http://www.baidu.com/&quot;</a>, headers = ua_headers)</p>
-<p>response = urllib.request.urlopen(request)</p>
-<h1 id="返回HTTP的响应码，成功返回200，"><a href="#返回HTTP的响应码，成功返回200，" class="headerlink" title="返回HTTP的响应码，成功返回200，"></a>返回HTTP的响应码，成功返回200，</h1><p>print(response.getcode())</p>
-<h1 id="返回实际url"><a href="#返回实际url" class="headerlink" title="返回实际url"></a>返回实际url</h1><p>print(response.geturl())</p>
-<h1 id="返回-服务器响应的HTTP报头"><a href="#返回-服务器响应的HTTP报头" class="headerlink" title="返回 服务器响应的HTTP报头"></a>返回 服务器响应的HTTP报头</h1><p>print(response.info())</p>
-<p>print(response.read().decode(‘utf-8’))</p>
-<h1 id="“user-Agent”-“Mozilla-5-0-Windows-NT-10-0-WOW64-AppleWebKit-537-36-KHTML-like-Gecko-Chrome-65-0-3325-181-Safari-537-36”"><a href="#“user-Agent”-“Mozilla-5-0-Windows-NT-10-0-WOW64-AppleWebKit-537-36-KHTML-like-Gecko-Chrome-65-0-3325-181-Safari-537-36”" class="headerlink" title="“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”"></a>“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”</h1><pre><code>
-一些浏览器的url-agent
-* &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv2.0.1) Gecko/20100101 Firefox/4.0.1&quot;,
-* &quot;Mozilla/5.0 (Windows NT 6.1; rv2.0.1) Gecko/20100101 Firefox/4.0.1&quot;,
-*  &quot;Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; en) Presto/2.8.131 Version/11.11&quot;,
-*  &quot;Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11&quot;,
-*  &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 
-  Safari/535.11&quot;
-
-## 高级
-
-  ```python
-
-import urllib.request
-import random
-
-url = &quot;http://www.baidu.com/&quot;
-
-# 可以是User-Agent列表，也可以是代理列表
-ua_list = [
-        &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv2.0.1) Gecko/20100101 Firefox/4.0.1&quot;,
-        &quot;Mozilla/5.0 (Windows NT 6.1; rv2.0.1) Gecko/20100101 Firefox/4.0.1&quot;,
-        &quot;Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; en) Presto/2.8.131 Version/11.11&quot;,
-        &quot;Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11&quot;,
-        &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11&quot;
-]
-# 在列表里随机选一个URL-agent
-user_agent = random.choice(ua_list)
-# 构筑一个请求
-request = urllib.request.Request(url)
-# 添加一个报头
-request.add_header(&quot;User-Agent&quot;,user_agent )
-# 获取报头值，只第一个字母大写
-print(request.get_header(&quot;User-agent&quot;) )
-
-response = urllib.request.urlopen(request)
-
-# 返回HTTP的响应码，成功返回200，
-print(response.getcode())
-# 返回实际url
-print(response.geturl())
-# 返回 服务器响应的HTTP报头
-print(response.info())
-
-print(response.read().decode(&apos;utf-8&apos;))
-
-
-</code></pre><p>import urllib.parse</p>
-<p>urllib.parse 的 urlencode() 接收的参数是一个字典：</p>
-<p>wd = {“wd” : “传智播客”}</p>
-<p>urllib.parse.urlencode(wd)</p>
-<p>结果：wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2</p>
-<p>通过urllib.parse.unquote()方法，把 URL编码字符串，转换回原先字符串。</p>
-<p>print(urllib.parseunquote(“wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2”))</p>
-<p>wd=传智播客</p>
-<hr>
-
-<p>自制百度接口</p>
-<pre><code class="python"><span class="keyword">import</span> urllib.request
-<span class="keyword">import</span> urllib.parse
-
-url = <span class="string">"http://www.baidu.com/s"</span>
-
-keyword = input(<span class="string">"请输入要查询的字符串"</span>)
-
-wd = {<span class="string">"wd"</span>: keyword}
-
-wd = urllib.parse.urlencode(wd)
-
-fullurl = url +<span class="string">"?"</span>+ wd
-
-ua_headers = {<span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv2.0.1) Gecko/20100101 Firefox/4.0.1"</span>}
-request = urllib.request.Request(fullurl,headers = ua_headers)
-
-response = urllib.request.urlopen(request)
-
-print(response.read().decode(<span class="string">'utf-8'</span>))
-
-</code></pre>
-<hr>
-
-
-
-
+<li><p>\b 匹配⼀个单词的边界</p>
+</li>
+<li>\B 匹配⾮单词边界</li>
+<li>| 匹配左右任意⼀个表达式</li>
+</ul>
 
     </div>
     <footer>
@@ -273,10 +176,8 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2018/04/02/html的使用/" class="alignleft prev" title="html的使用">html的使用</a>
     
-    
-    <a href="/2018/03/31/mysql的使用/" class="alignright next" title="mysql与python的使用">mysql与python的使用</a>
+    <a href="/2018/04/06/爬虫（二）/" class="alignright next" title="爬虫（二）">爬虫（二）</a>
     
     <div class="clearfix"></div>
 </nav>
@@ -286,7 +187,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2018/04/01/爬虫/" data-title="爬虫（一）" data-url="https://wzm2123.github.io/2018/04/01/爬虫/"></div>
+		<div class="ds-thread" data-thread-key="2018/04/10/正则表达式/" data-title="正则表达式" data-url="https://wzm2123.github.io/2018/04/10/正则表达式/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
