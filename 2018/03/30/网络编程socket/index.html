@@ -100,7 +100,7 @@ socket.SOCK_DGRA">
     </p>
   <p class="article-time">
     <time datetime="2018-03-30T05:17:19.000Z" itemprop="datePublished">2018-03-30</time>
-    更新日期:<time datetime="2018-04-11T02:14:24.023Z" itemprop="dateModified">2018-04-11</time>
+    更新日期:<time datetime="2018-04-11T06:28:16.786Z" itemprop="dateModified">2018-04-11</time>
     
   </p>
 </header>
@@ -136,6 +136,7 @@ socket.SOCK_DGRA">
 <p>服务端<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 作者：王子明</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>  socket,os</span><br><span class="line"></span><br><span class="line">server = socket.socket() <span class="comment">#声明</span></span><br><span class="line">server.bind((<span class="string">"localhost"</span>, <span class="number">9998</span>))<span class="comment">#绑定</span></span><br><span class="line">server.listen()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>: <span class="comment">#可以继续接收下一台</span></span><br><span class="line">    conn,addr = server.accept()<span class="comment"># 等待(连接实例,地址)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        data= conn.recv(<span class="number">1024</span>)<span class="comment">#接收新指令</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>  <span class="keyword">not</span> data:<span class="comment">#防止死循环</span></span><br><span class="line">            print(<span class="string">"客户端已断开"</span>)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        data_msg =os.popen(data.decode()).read() <span class="comment">#接收字符串,返回也是字符串</span></span><br><span class="line">        <span class="keyword">if</span> len(data_msg) == <span class="number">0</span>:</span><br><span class="line">            data_msg = <span class="string">"命令错误"</span></span><br><span class="line">        conn.send(str(len(data_msg.encode())).encode(<span class="string">"utf-8"</span>)) <span class="comment">#先发大小给客户端</span></span><br><span class="line"></span><br><span class="line">        conn.send(data_msg.encode(<span class="string">"utf-8"</span>))</span><br><span class="line"></span><br><span class="line">server.close()</span><br></pre></td></tr></table></figure></p>
 <hr>
 
+<h3 id="udp的使用"><a href="#udp的使用" class="headerlink" title="udp的使用"></a>udp的使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s = socket(AF_INET, SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line">s.bind((<span class="string">"192.168.252.1"</span>,<span class="number">7788</span>))</span><br><span class="line"></span><br><span class="line">recvdata1 = s.recvfrom(<span class="number">1024</span>)</span><br><span class="line"></span><br><span class="line">content, destinfo =  recvdata1</span><br><span class="line"></span><br><span class="line">print(content.decode(<span class="string">"gbk"</span>))</span><br><span class="line"></span><br><span class="line">s.sendto(<span class="string">b"hello"</span>,(<span class="string">"192.168.252.1"</span>,<span class="number">8080</span>))</span><br></pre></td></tr></table></figure>
     </div>
     <footer>
         
@@ -190,7 +191,7 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2018/03/31/mysql的使用/" class="alignleft prev" title="mysql与python的使用">mysql与python的使用</a>
+    <a href="/2018/03/31/mysql的使用/" class="alignleft prev" title="mysql与python的使用（一）">mysql与python的使用（一）</a>
     
     
     <a href="/2018/03/30/python一些相关的知识点-二/" class="alignright next" title="python一些相关的知识点(二)">python一些相关的知识点(二)</a>
@@ -235,7 +236,7 @@ with(document)0[
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
+    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
   </div>
 </div>
 

@@ -15,10 +15,10 @@
 	})();
 	</script>
   
-  <title>mysql与python的使用 | 王子明</title>
+  <title>mysql与python的使用（一） | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="mysql与python的使用字段类型decimal(5,2) 一个五位数，2位小数
+  <meta name="description" content="mysql与python的使用（一）字段类型decimal(5,2) 一个五位数，2位小数
 char(8)存的字符固定
 varchar(8)字符长度可变
 datetime 日期
@@ -28,12 +28,12 @@ bit 布尔
 非空 not null
 唯一 unique
 默认 default
-外键 for">
+外键 ">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="mysql与python的使用"/>
+  <meta property="og:title" content="mysql与python的使用（一）"/>
   <meta property="og:site_name" content="王子明"/>
 
   
@@ -89,7 +89,7 @@ bit 布尔
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	mysql与python的使用
+	mysql与python的使用（一）
   </h1>
   <p class="article-author">By
     
@@ -97,13 +97,13 @@ bit 布尔
     </p>
   <p class="article-time">
     <time datetime="2018-03-31T13:37:49.000Z" itemprop="datePublished">2018-03-31</time>
-    更新日期:<time datetime="2018-04-11T03:16:26.340Z" itemprop="dateModified">2018-04-11</time>
+    更新日期:<time datetime="2018-04-11T06:54:55.135Z" itemprop="dateModified">2018-04-11</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="mysql与python的使用"><a href="#mysql与python的使用" class="headerlink" title="mysql与python的使用"></a>mysql与python的使用</h1><h2 id="字段类型"><a href="#字段类型" class="headerlink" title="字段类型"></a>字段类型</h2><p>decimal(5,2) 一个五位数，2位小数</p>
+        <h1 id="mysql与python的使用（一）"><a href="#mysql与python的使用（一）" class="headerlink" title="mysql与python的使用（一）"></a>mysql与python的使用（一）</h1><h2 id="字段类型"><a href="#字段类型" class="headerlink" title="字段类型"></a>字段类型</h2><p>decimal(5,2) 一个五位数，2位小数</p>
 <p>char(8)存的字符固定</p>
 <p>varchar(8)字符长度可变</p>
 <p>datetime 日期</p>
@@ -131,7 +131,7 @@ bit 布尔
 </li>
 <li><p>desc 表名</p>
 </li>
-<li>select * from user\G;<br><br> 查看表里所有的数据</li>
+<li>select * from 表名\G;<br><br> 查看表里所有的数据</li>
 <li>show databases;<br> 查看数据库</li>
 <li>select database();<br> 查看当前用的数据库    <hr>
 
@@ -142,6 +142,11 @@ bit 布尔
 <p>修改表<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">add</span>|<span class="keyword">change</span>|<span class="keyword">drop</span> 列名 类型;</span><br><span class="line">如;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> students <span class="keyword">add</span> birthday datetime;</span><br></pre></td></tr></table></figure></p>
 <p>删除表</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> 表名;</span><br></pre></td></tr></table></figure>
+<h2 id="表的操作"><a href="#表的操作" class="headerlink" title="表的操作"></a>表的操作</h2><p>添加<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">全列添加 ： <span class="keyword">insert</span> <span class="keyword">into</span> 表名 <span class="keyword">values</span>(...);</span><br><span class="line">缺省插入 :  <span class="keyword">insert</span> <span class="keyword">into</span> 表名(列<span class="number">1.</span>。。) <span class="keyword">values</span>(...);</span><br><span class="line">同时插入多条数据： <span class="keyword">insert</span> <span class="keyword">into</span> 表名 <span class="keyword">values</span>(...),(..)..;</span><br></pre></td></tr></table></figure></p>
+<p>修改</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">update</span> 表名 <span class="keyword">set</span> 列<span class="number">1</span>=值<span class="number">1</span>，。。。 <span class="keyword">where</span> 条件;</span><br></pre></td></tr></table></figure>
+<p>删除</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> 表名 <span class="keyword">where</span> 条件</span><br></pre></td></tr></table></figure>
 <h2 id="mysql-与-python-的交互"><a href="#mysql-与-python-的交互" class="headerlink" title="mysql 与 python 的交互"></a>mysql 与 python 的交互</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 作者：王子明</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建连接</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'10.101.237.45'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, passwd=<span class="string">'wzm123456789'</span>, db=<span class="string">'数据库1'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"><span class="comment"># 创建游标</span></span><br><span class="line">cursor = conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行SQL，并返回收影响行数 查表中所有数据</span></span><br><span class="line">effect_row = cursor.execute(<span class="string">"select * from wzm"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示有几行数</span></span><br><span class="line">print(effect_row)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 只读一行读</span></span><br><span class="line">print(cursor.fetchone())</span><br><span class="line">print(cursor.fetchone())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取前n行数据</span></span><br><span class="line">cursor.fetchmany(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"------"</span>)</span><br><span class="line"></span><br><span class="line">print(cursor.fetchall())   <span class="comment"># 读所有（但之前读过的不读）</span></span><br></pre></td></tr></table></figure>
 <hr>
 
@@ -214,7 +219,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2018/03/31/mysql的使用/" data-title="mysql与python的使用" data-url="https://wzm2123.github.io/2018/03/31/mysql的使用/"></div>
+		<div class="ds-thread" data-thread-key="2018/03/31/mysql的使用/" data-title="mysql与python的使用（一）" data-url="https://wzm2123.github.io/2018/03/31/mysql的使用/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
@@ -246,7 +251,7 @@ with(document)0[
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
+    <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a>
   </div>
 </div>
 
