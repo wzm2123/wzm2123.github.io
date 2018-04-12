@@ -102,7 +102,7 @@ in表示在一个非连续的范围内
     </p>
   <p class="article-time">
     <time datetime="2018-04-11T06:55:36.000Z" itemprop="datePublished">2018-04-11</time>
-    更新日期:<time datetime="2018-04-11T08:55:37.037Z" itemprop="dateModified">2018-04-11</time>
+    更新日期:<time datetime="2018-04-11T13:02:14.302Z" itemprop="dateModified">2018-04-11</time>
     
   </p>
 </header>
@@ -149,6 +149,22 @@ in表示在一个非连续的范围内
 <p>order by 列 asc | desc ,列2  asc | desc,…</p>
 <p>分页</p>
 <p>select * from 表名 limit start,count  从第几条开始取，那几个</p>
+<hr>
+
+<p>外键</p>
+<p>foreign key(stuid) references subjects(id),</p>
+<h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><p>from scores</p>
+<p>inner join students on scores.stuid = students.id # 关系</p>
+<p>inner join subjects on scores.subid = subjects.id</p>
+<hr>
+
+<p>inner join 都有的才会出现</p>
+<p>left join  以左表的信息为准</p>
+<p>right join  以右表的信息为准</p>
+<hr>
+
+<p>添加外键</p>
+<p>alter table stu add constraint stu_room foreign key(roomid) references room(id) ; </p>
 
     </div>
     <footer>
