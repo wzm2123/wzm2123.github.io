@@ -15,15 +15,15 @@
 	})();
 	</script>
   
-  <title>正则表达式 | 王子明</title>
+  <title>Django的使用(二) | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="正则表达式12345678910111213#导⼊re模块				import	re#	使⽤match⽅法进⾏匹配操作result	= re.match(正则表达式,要匹配的字符串)#如果上⼀步匹配到数据的话，可以使⽤group⽅法来提取数据				result.group()re.match是⽤来">
+  <meta name="description" content="Django的使用(二)CBV12345678910111213path(&#39;home/&#39;, views.Home.as_view()),from django.views import Viewclass Home(View):    def get (self,request):        p">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="正则表达式"/>
+  <meta property="og:title" content="Django的使用(二)"/>
   <meta property="og:site_name" content="王子明"/>
 
   
@@ -79,49 +79,24 @@
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	正则表达式
+	Django的使用(二)
   </h1>
   <p class="article-author">By
     
       <a href="https://wzm2123.github.io" title="王子明">王子明</a>
     </p>
   <p class="article-time">
-    <time datetime="2018-04-10T11:18:25.000Z" itemprop="datePublished">2018-04-10</time>
-    更新日期:<time datetime="2018-04-15T14:10:41.964Z" itemprop="dateModified">2018-04-15</time>
+    <time datetime="2018-04-15T13:33:18.000Z" itemprop="datePublished">2018-04-15</time>
+    更新日期:<time datetime="2018-04-15T14:37:05.855Z" itemprop="dateModified">2018-04-15</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导⼊re模块				</span></span><br><span class="line">import	re</span><br><span class="line"></span><br><span class="line"><span class="comment">#	使⽤match⽅法进⾏匹配操作</span></span><br><span class="line">result	= re.<span class="built_in">match</span>(正则表达式,要匹配的字符串)</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果上⼀步匹配到数据的话，可以使⽤group⽅法来提取数据				</span></span><br><span class="line">result.<span class="keyword">group</span>()</span><br><span class="line"></span><br><span class="line">re.<span class="built_in">match</span>是⽤来进⾏正则匹配检查的⽅法，若字符串匹配正则 表达式，则<span class="built_in">match</span>⽅法返回匹配对象（Match	Object），否则 返回None（注意不是空字符串<span class="string">""</span>）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">匹配对象Macth Object具有<span class="keyword">group</span>⽅法，⽤来返回字符串的匹 配部分。</span><br></pre></td></tr></table></figure>
-<ul>
-<li>. 匹配任意1个字符（除了\n） </li>
-<li>\d 匹配数字，即0-9</li>
-<li>\D 匹配⾮数字，即不是数字 </li>
-<li>\s 匹配空⽩，即    空格，tab键</li>
-<li><p>\S 匹配⾮空⽩ </p>
-</li>
-<li><p>\w 匹配单词字符，即a-z、A-Z、0-9、_ </p>
-</li>
-<li>\W 匹配⾮单词字符</li>
-<li style="list-style: none"><input type="checkbox"> 匹配[    ]中列举的字符 (中间不能有间隔)</li>
-<li>* 匹配前⼀个字符出现0次或者⽆限次，即可有可</li>
-<li>+ 匹配前⼀个字符出现1次或者⽆限次，即⾄少有1次</li>
-<li>? 匹配前⼀个字符出现1次或者0次，即要么有1次，要么没有</li>
-<li>{m} 匹配前⼀个字符出现m次</li>
-<li>{m,} 匹配前⼀个字符⾄少出现m次</li>
-<li>{m,n} 匹配前⼀个字符出现从m到n次</li>
-</ul>
-<h4 id="re-match-r”-n-w”-”-nac”"><a href="#re-match-r”-n-w”-”-nac”" class="headerlink" title="re.match(r”\n\w”,”\nac”)"></a>re.match(r”\n\w”,”\nac”)</h4><ul>
-<li>^ 匹配字符串开头 </li>
-<li><p>$ 匹配字符串结尾</p>
-</li>
-<li><p>\b 匹配⼀个单词的边界</p>
-</li>
-<li>\B 匹配⾮单词边界</li>
-<li>| 匹配左右任意⼀个表达式</li>
-</ul>
+        <h1 id="Django的使用-二"><a href="#Django的使用-二" class="headerlink" title="Django的使用(二)"></a>Django的使用(二)</h1><h3 id="CBV"><a href="#CBV" class="headerlink" title="CBV"></a>CBV</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">path(<span class="string">'home/'</span>, views.Home.as_view()),</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.views <span class="keyword">import</span> View</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Home</span><span class="params">(View)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span> <span class="params">(self,request)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">post</span><span class="params">(self,request)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<hr>
 
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">path(<span class="string">'detail-(\d+).html/'</span>, views.detail),</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">detail</span><span class="params">(request,nid)</span>:</span></span><br><span class="line">   <span class="comment"># 字典类型 </span></span><br><span class="line">      detail_info = user_dict[nid]</span><br><span class="line">      <span class="keyword">return</span> render(request,<span class="string">'detail.html'</span>,&#123;<span class="string">'detail_info'</span>: detail_info&#125;)</span><br></pre></td></tr></table></figure>
     </div>
     <footer>
         
@@ -176,10 +151,8 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2018/04/11/mysql与python的使用（二）/" class="alignleft prev" title="mysql与python的使用（二)">mysql与python的使用（二)</a>
     
-    
-    <a href="/2018/04/06/爬虫（二）/" class="alignright next" title="爬虫（二）">爬虫（二）</a>
+    <a href="/2018/04/13/进程与线程/" class="alignright next" title="进程与线程">进程与线程</a>
     
     <div class="clearfix"></div>
 </nav>
@@ -189,7 +162,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2018/04/10/正则表达式/" data-title="正则表达式" data-url="https://wzm2123.github.io/2018/04/10/正则表达式/"></div>
+		<div class="ds-thread" data-thread-key="2018/04/15/Django的使用-二/" data-title="Django的使用(二)" data-url="https://wzm2123.github.io/2018/04/15/Django的使用-二/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">

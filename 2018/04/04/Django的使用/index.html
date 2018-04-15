@@ -15,10 +15,10 @@
 	})();
 	</script>
   
-  <title>Django的使用 | 王子明</title>
+  <title>Django的使用(一) | 王子明</title>
   <meta name="author" content="王子明">
   
-  <meta name="description" content="Django的使用
+  <meta name="description" content="Django的使用（一）
 创建
 
 django-admin startproject 工程名
@@ -33,20 +33,18 @@ python manage.py runserver  (指定端口)可不写
 
 
 
-创建APP应用
+创建APP应用(只能用命令)
 python manage.py startapp 文件名
 
 
 
 
-
-设计介绍
-本示例完">
+">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Django的使用"/>
+  <meta property="og:title" content="Django的使用(一)"/>
   <meta property="og:site_name" content="王子明"/>
 
   
@@ -102,7 +100,7 @@ python manage.py startapp 文件名
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	Django的使用
+	Django的使用(一)
   </h1>
   <p class="article-author">By
     
@@ -110,13 +108,13 @@ python manage.py startapp 文件名
     </p>
   <p class="article-time">
     <time datetime="2018-04-04T07:58:38.000Z" itemprop="datePublished">2018-04-04</time>
-    更新日期:<time datetime="2018-04-14T14:37:05.075Z" itemprop="dateModified">2018-04-14</time>
+    更新日期:<time datetime="2018-04-15T12:09:16.506Z" itemprop="dateModified">2018-04-15</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <h1 id="Django的使用"><a href="#Django的使用" class="headerlink" title="Django的使用"></a>Django的使用</h1><ol>
+        <h1 id="Django的使用（一）"><a href="#Django的使用（一）" class="headerlink" title="Django的使用（一）"></a>Django的使用（一）</h1><ol>
 <li><p>创建</p>
 <ul>
 <li>django-admin startproject 工程名</li>
@@ -131,7 +129,7 @@ python manage.py startapp 文件名
 </li>
 </ol>
 <ol start="4">
-<li>创建APP应用<ul>
+<li>创建APP应用(只能用命令)<ul>
 <li>python manage.py startapp 文件名</li>
 </ul>
 </li>
@@ -176,7 +174,25 @@ python manage.py startapp 文件名
 <p><hr><br>编辑settings.py文件，设置编码、时区</p>
 <p>LANGUAGE_CODE = ‘zh-Hans’  改汉语</p>
 <p>TIME_ZONE = ‘Asia/Shanghai’</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">settings中</span><br><span class="line">		</span><br><span class="line">middlerware</span><br><span class="line">		</span><br><span class="line"><span class="meta">#</span><span class="bash"> 注释 csrf</span></span><br></pre></td></tr></table></figure>
+<p>urls.py</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    <span class="built_in">path</span>(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    <span class="built_in">path</span>(<span class="string">'index/'</span>, views.index),</span><br><span class="line">    <span class="built_in">path</span>(<span class="string">'login/'</span>, views.login),</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>app中views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span>  HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span>  redirect</span><br><span class="line"><span class="comment"># Create your views here.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(request)</span>:</span><span class="comment"># 包含用户所提交的所有信息</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     user = request.POST.get(<span class="string">"user"</span>, <span class="keyword">None</span>)</span><br><span class="line">     pwd = request.POST.get(<span class="string">"pwd"</span>, <span class="keyword">None</span>)</span><br><span class="line">     error = <span class="string">""</span></span><br><span class="line">     <span class="keyword">if</span> request.method ==<span class="string">"POST"</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> user == <span class="string">'123'</span> <span class="keyword">and</span> pwd == <span class="string">'123'</span>:</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> redirect(<span class="string">'/index/'</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            error = <span class="string">"用户名或密码错误"</span></span><br><span class="line">            <span class="comment"># 自动打开文件并返回</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> render(request,<span class="string">'login.html'</span>, &#123;<span class="string">"error"</span>:error&#125;)</span><br><span class="line"></span><br><span class="line">user_list = [</span><br><span class="line">    &#123;<span class="string">'username'</span>:<span class="string">'大V'</span>,<span class="string">'gender'</span>:<span class="string">'男'</span>&#125; ,</span><br><span class="line">]</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">    temp = &#123;<span class="string">'username'</span>:<span class="string">'大V'</span>+str(item),<span class="string">'gender'</span>:<span class="string">'男'</span>&#125;</span><br><span class="line">    user_list.append(temp)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">"POST"</span>:</span><br><span class="line">        <span class="comment"># return redirect('https://www.baidu.com') #跳转命令</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'index.html'</span>,&#123;<span class="string">'user_list'</span>:user_list&#125;)</span><br></pre></td></tr></table></figure>
+<p>app下views.py</p>
+<p>def func(request):</p>
+<pre><code># request.method   GET / POST
 
+# http://127.0.0.1:8009/home?nid=123&amp;name=alex
+# request.GET.get(&apos;&apos;,None)   # 获取请求发来的而数据
+
+# request.POST.get(&apos;&apos;,None)
+
+
+# return HttpResponse(&quot;字符串&quot;)
+# return render(request, &quot;HTML模板的路径&quot;)
+# return redirect(&apos;/只能填URL/&apos;)
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">&#123;% for item in user_list %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; item.username &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; item.gender &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span>  <span class="attr">action</span>=<span class="string">"/login/"</span> <span class="attr">method</span>=<span class="string">"post"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">lable</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">lable</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">name</span>=<span class="string">"user"</span> <span class="attr">type</span>=<span class="string">"text"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">lable</span> <span class="attr">for</span>=<span class="string">"password"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">lable</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"pwd"</span> <span class="attr">type</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span>  <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:red;"</span>&gt;</span>&#123;&#123;error&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
     </div>
     <footer>
         
@@ -244,7 +260,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2018/04/04/Django的使用/" data-title="Django的使用" data-url="https://wzm2123.github.io/2018/04/04/Django的使用/"></div>
+		<div class="ds-thread" data-thread-key="2018/04/04/Django的使用/" data-title="Django的使用(一)" data-url="https://wzm2123.github.io/2018/04/04/Django的使用/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
