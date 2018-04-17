@@ -95,7 +95,7 @@ jupyter notebook
     </p>
   <p class="article-time">
     <time datetime="2018-04-01T13:13:38.000Z" itemprop="datePublished">2018-04-01</time>
-    更新日期:<time datetime="2018-04-06T12:21:38.917Z" itemprop="dateModified">2018-04-06</time>
+    更新日期:<time datetime="2018-04-16T09:19:16.228Z" itemprop="dateModified">2018-04-16</time>
     
   </p>
 </header>
@@ -130,11 +130,15 @@ print(response.read().decode(<span class="string">'utf-8'</span>))
 <p>ua_headers = {“User-Agent”:”Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”}</p>
 <h1 id="通过urllib-request-Request-方法构造一个请求对象"><a href="#通过urllib-request-Request-方法构造一个请求对象" class="headerlink" title="通过urllib.request.Request()方法构造一个请求对象"></a>通过urllib.request.Request()方法构造一个请求对象</h1><p>request = urllib.request.Request(“<a href="http://www.baidu.com/&quot;" target="_blank" rel="noopener">http://www.baidu.com/&quot;</a>, headers = ua_headers)</p>
 <p>response = urllib.request.urlopen(request)</p>
-<h1 id="返回HTTP的响应码，成功返回200，"><a href="#返回HTTP的响应码，成功返回200，" class="headerlink" title="返回HTTP的响应码，成功返回200，"></a>返回HTTP的响应码，成功返回200，</h1><p>print(response.getcode())</p>
-<h1 id="返回实际url"><a href="#返回实际url" class="headerlink" title="返回实际url"></a>返回实际url</h1><p>print(response.geturl())</p>
-<h1 id="返回-服务器响应的HTTP报头"><a href="#返回-服务器响应的HTTP报头" class="headerlink" title="返回 服务器响应的HTTP报头"></a>返回 服务器响应的HTTP报头</h1><p>print(response.info())</p>
+<p>返回HTTP的响应码，成功返回200，</p>
+<p>print(response.getcode())</p>
+<p>返回实际url</p>
+<p>print(response.geturl())</p>
+<p>返回 服务器响应的HTTP报头</p>
+<p>print(response.info())</p>
 <p>print(response.read().decode(‘utf-8’))</p>
-<h1 id="“user-Agent”-“Mozilla-5-0-Windows-NT-10-0-WOW64-AppleWebKit-537-36-KHTML-like-Gecko-Chrome-65-0-3325-181-Safari-537-36”"><a href="#“user-Agent”-“Mozilla-5-0-Windows-NT-10-0-WOW64-AppleWebKit-537-36-KHTML-like-Gecko-Chrome-65-0-3325-181-Safari-537-36”" class="headerlink" title="“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”"></a>“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”</h1><pre><code>
+<p>“user-Agent”: “Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36”</p>
+<pre><code>
 一些浏览器的url-agent
 * &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv2.0.1) Gecko/20100101 Firefox/4.0.1&quot;,
 * &quot;Mozilla/5.0 (Windows NT 6.1; rv2.0.1) Gecko/20100101 Firefox/4.0.1&quot;,
